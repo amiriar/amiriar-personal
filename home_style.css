@@ -62,7 +62,9 @@ p{
     height: 35px; 
     border-radius: 2px; 
 }
-
+textarea {
+    resize: vertical;
+}
 @media(max-width: 930px) {
     .article{
         margin-top: -50px;
