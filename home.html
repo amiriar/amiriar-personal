@@ -52,7 +52,7 @@
         <div class="col c4">
             <marquee behavior="" direction="" style="font-size: 12px;">This form does not actually work ! so if you want to talk with me <a href="mailto:abdolrahimiamirreza@gmail.com">Click Here !</a>&nbsp;.</marquee>
            <br>
-           <form action=""><br>
+           <form onsubmit="sendEmail(); reset(); return false"><br>
             <label for="fname" style="font-size: 10px;">Name<span style="color: red;">&nbsp;*</span></label><br>
             <input type="text" name="fname" id="lname" size="14" class="inp">
             <input type="text" name="fname" id="lname" size="14" class="inp"><br>
@@ -69,6 +69,23 @@
         </div>
     </article><br><br><br><br>
 
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "username",
+        Password : "password",
+        To : 'them@website.com',
+        From : "you@isp.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+            })
+        }
+    </script>
 </body>
 </html>
